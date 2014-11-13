@@ -1,0 +1,44 @@
+{
+    "name" : "Deezer Elite",
+
+"COMMENT_1" : "This block contiains all of the things a player may or may not have",
+
+    "has_thumbs_up" : true,
+    "has_thumbs_down" : false,
+    "has_next_track" : true,
+    "has_prev_track" : true,
+    "has_play_pause" : true,
+    "has_shuffle" : true,
+    "has_repeat" : true,
+    "has_current_track_time" : true,
+    "has_total_track_time" : true,
+    "has_remaining_track_time" : false,
+
+"COMMENT_2" : "This block contains all boolean values we can get back from the player",
+
+    "isPlaying" : "$('.control-play', '.player-controls').css('display') == 'none'",
+    "isPaused" : "$('.control-pause', '.player-controls').css('display') == 'none'",
+    "isShuffled" : "$('.control-shuffle', '.player-controls').hasClass('active')",
+    "isRepeatOff" : "!$('.control-repeat', '.player-controls').hasClass('selected')",
+    "isRepeatOne" : "var a=$('#player_option_repeat'); a.hasClass('selected') && a.hasClass('option-repeat-one')",
+    "isRepeatAll" : "var a=$('#player_option_repeat'); a.hasClass('selected') && !a.hasClass('option-repeat-one')",
+    "isThumbedUp" : "$('#player_action_love').hasClass('selected')",
+
+"COMMENT_3" : "This block contains all string values we can get back from the player",
+
+    "artUrl" : "$('.player-cover img').attr('src')",
+    "artist" : "$('.player-track-artist .player-track-link').text()",
+    "track" : "$('.player-track-title .player-track-link').text()",
+    "currentTime" : "$('.progress-time').text()",
+    "totalTime" : "$('.progress-length').text()",
+
+"COMMENT_4" : "Finally, this block contains info on how to perform actions",
+
+    "click_play" : "$('[data-action=play]').click()",
+    "click_pause" : "$('[data-action=pause]').click()",
+    "click_next_track" : "$('[data-action=nextSong]').click()",
+    "click_prev_track" : "$('[data-action=prevSong]').click()",
+    "click_shuffle" : "$('[data-action=setShuffle]').click()",
+    "click_repeat" : "$('[data-action=setRepeat]').click()",
+    "click_thumbs_up" : "$('.action.icon-love-circle').click()"
+}
